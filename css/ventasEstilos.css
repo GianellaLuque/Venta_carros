@@ -1,0 +1,33 @@
+/* CSS Document */
+body{
+    /*width: 900px;*/
+    background-color: antiquewhite;
+}
+#contenedor{
+    width: 900px;
+    margin: auto;
+    border: 1px solid black;
+}
+#nombres {
+    display: inline-block;
+}
+#entradas{
+    display: inline-block;
+}
+ul{
+    list-style-type: none;
+}
+p, #contenedor h1{
+    /*display: inline;
+    margin: auto;*/
+    /*text-align: center;*/
+    text-indent: 40px;
+}
+#botones{
+    border: 1px solid black;
+    /*box-shadow: 1px;*/
+}
+#aceptar{
+    background-color: aqua;
+    display: inline-block;
+}
