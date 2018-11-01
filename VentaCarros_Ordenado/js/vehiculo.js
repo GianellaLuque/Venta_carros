@@ -64,5 +64,6 @@ function registrar() {
 	//document.write(""+localStorage.getItem("auto")+"</br>");
 };
 var Vehiculo1 = new vehiculo();
+var Prueba = "Hola";
 
 

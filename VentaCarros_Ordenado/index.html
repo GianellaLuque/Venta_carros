@@ -5,13 +5,14 @@
 	<title>Venta de carros</title>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="js/vehiculo.js"></script>
+	<script type="text/javascript" src="js/ventas.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/misestilos.css">
 </head>
 
 <body>
 	<section id="cajapadre">
 		<div id="Clientes">
-			<h2>USUARIO</h2>
+			<h2>CLIENTES</h2>
 			<form name="miformulario" action="execute.js" method="post" onSubmit="return validar();">
 				<table>
 					<tr>
@@ -109,19 +110,38 @@
 
 				</div>
 				<div id="entradas">
-					<input type="text"><br>
-					<input type="number"><br>
-					<input type="number"><br>
-					<input type="date">
+					<input type="text" id="nombreCliente"><br>
+					<input type="number" id="precioVenta"><br>
+					<input type="number" id="nroFactura"><br>
+					<input type="date" id="fechaVenta">
 				</div>
 
 			</div>
 			<div id="botones">
-				<span id="aceptar"><a href="paginaMenu.html">Aceptar</a></span>
-				<span id="cancelar"><a href="paginaMenu.html">Cancelar</a></span>
+				<button id="ventaAceptar">Aceptar</button>
+				<button class="" id="ventaCancelar">Cancelar</button>
+			</div>
+			<div>
+				<table id="TablaRegistroVentas">
+					<th>NombreCliente</th>
+					<th>Precio</th>
+					<th>NroFactura</th>
+					<th>Fecha</th>
+				</table>
+
 			</div>
 		</div>
-		<div id="Factura"></div>
+		<div id="Factura">
+			<table border="1px" class="tabla" id="miTabla">
+				<tr>
+					<th>Cliente</th>
+					<th>Fecha</th>
+					<th>Vehiculo</th>
+					<th>Precio</th>
+					<th>NroFactura</th>
+				</tr>
+			</table>
+		</div>
 	</section>
 </body>
 
