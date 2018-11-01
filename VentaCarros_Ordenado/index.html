@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Venta de carros</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/vehiculo.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/misestilos.css">
+</head>
+
+<body>
+	<section id="cajapadre">
+		<div id="Clientes">
+			<h2>USUARIO</h2>
+			<form name="miformulario" action="execute.js" method="post" onSubmit="return validar();">
+				<table>
+					<tr>
+						<td> Nombre </td>
+						<td>
+							<input type="text" name="nombre" size="30" maxlength="100" id="nombre">
+						</td>
+					</tr>
+					<tr>
+						<td>DNI: </td>
+						<td><input type="text" name="edad" size="4" maxlength="10" id="dni">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="button" onclick="mostrarMensaje();" value="REGISTAR">
+							<input type="button" onclick="" value="EDITAR">
+
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div id="Vehiculo">
+			<h1>VEHICULOS</h1>
+			<div id="FormularioV">
+				<form>
+					<table>
+						<tr>
+							<td colspan="2" align="center">
+								<h1>Registro de VEHICULOS</h1>
+							</td>
+						</tr>
+						<tr>
+							<td><label>Color:</label></td>
+							<td><input type="color" name="" id="color"></td>
+						</tr>
+						<tr>
+							<td><label>Placa:</label></td>
+							<td><input type="text" name="" id="placa"></td>
+						</tr>
+						<tr>
+							<td>Tipo:</td>
+							<td>
+								<select name="" id="tipo">
+									<option value="Camioneta">Camioneta</option>
+									<option value="Auto">Auto</option>
+									<option value="Minibus">Minibus</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label>Año de Fabricacion:</label></td>
+							<td><input type="Date" name="" id=AFabricacion></td>
+						</tr>
+						<tr>
+							<td><label>Cilindraje:</label></td>
+							<td><input type="number" name="" id="cilindraje"></td>
+						</tr>
+						<tr>
+							<td><label>Potencia:</label></td>
+							<td><input type="number" name="" id="potencia"></td>
+						</tr>
+					</table>
+				</form>
+				<br>
+			</div>
+			<div id="divRegistrar">
+				<button type="submit" onclick="registrar();">Registrar</button>
+				<br>
+				<table class="tabla" id="tablita">
+					<tr>
+						<th>Color</th>
+						<th>Placa</th>
+						<th>Tipo</th>
+						<th>Año Fabricacion</th>
+						<th>C.c</th>
+						<th>P</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="Ventas">
+			<p>
+				<h1>VENTAS</h1>
+			</p>
+			<div id="enlaces">
+				<div id="nombres">
+					<ul>
+						<li>Nombre de cliente: </li>
+						<li>Precio: </li>
+						<li>Numero de factura: </li>
+						<li>Fecha: </li>
+					</ul>
+
+				</div>
+				<div id="entradas">
+					<input type="text"><br>
+					<input type="number"><br>
+					<input type="number"><br>
+					<input type="date">
+				</div>
+
+			</div>
+			<div id="botones">
+				<span id="aceptar"><a href="paginaMenu.html">Aceptar</a></span>
+				<span id="cancelar"><a href="paginaMenu.html">Cancelar</a></span>
+			</div>
+		</div>
+		<div id="Factura"></div>
+	</section>
+</body>
+
+</html>
