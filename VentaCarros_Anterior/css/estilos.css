@@ -1,0 +1,12 @@
+#contenedor{
+    border: 1px solid red;
+    width: 900px;
+    margin: auto;
+}
+#contenedor h1{
+    text-align: center;
+    color: darkmagenta;
+}
+#menu li{
+    color:darkblue;
+}

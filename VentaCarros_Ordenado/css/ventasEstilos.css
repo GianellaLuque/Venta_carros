@@ -1,0 +1,52 @@
+/* CSS Document */
+body{
+    /*width: 900px;*/
+    background-color: antiquewhite;
+}
+#contenedor{
+/*    display: block;*/
+    width: 500px;
+    margin: auto;
+    padding-bottom: 20px;
+    border: 1px solid black;
+}
+#nombres {
+    display: inline-block;
+}
+#entradas{
+    display: inline-block;
+}
+ul{
+    list-style-type: none;
+}
+p, #contenedor h1{
+    /*display: inline;
+    margin: auto;*/
+    /*text-align: center;*/
+    text-indent: 40px;
+}
+#botones{
+    /*border: 1px solid black;*/
+    /*box-shadow: 1px;*/
+}
+
+#botones{
+    margin-left: 40px;
+    text-decoration-line: none;
+}
+#aceptar{
+    border-radius: 5px;
+    padding: 2px;
+    border: 1px solid black;
+    background-color: aqua;
+    display: inline-block;
+    right: 200px;
+}
+#cancelar{
+    border-radius: 5px;
+    padding: 2px;
+    border: 1px solid black;
+    background-color: aqua;
+    display: inline;
+    right: 50px;
+}

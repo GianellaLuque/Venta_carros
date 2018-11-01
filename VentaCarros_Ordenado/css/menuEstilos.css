@@ -1,0 +1,21 @@
+body{
+    /* background-color: #ffe6a0; */
+    background-image: url("../imagenes/gallery.jpg");
+}
+#contenedor{
+    border: 1px solid red;
+    width: 900px;
+    margin: auto;
+}
+#contenedor h1{
+    text-align: center;
+    color: darkmagenta;
+}
+#menu li{
+    color:orange;
+
+}
+a:link 
+{ 
+text-decoration:none; 
+} 
