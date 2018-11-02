@@ -1,5 +1,6 @@
 window.addEventListener("load",()=>{
-	//
+    //Creacion del objeto 
+    
 	var nombreCliente = document.getElementById("nombreCliente");
 	var precioVenta = document.getElementById("precioVenta");
 	var nroFactura = document.getElementById("nroFactura");
