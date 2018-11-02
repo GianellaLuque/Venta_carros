@@ -1,68 +1,64 @@
-function vehiculo() {
-	this.color1 = "";
-	this.placa = "";
-	this.tipo = "";
-	this.AFabricacion = "";
-	this.cilindraje = 0;
-	this.potencia = 0;
+document.getElementById('Button').addEventListener('click', guardarVehiculos);
 
-	this.obtenerPlaca = function () {
-		return this.placa;
-	};
-	this.registrarCar = function (Ncolor,Nplaca,Ntipo,NaFabricacion,Ncilindraje,Npotencia){
-		 this.color1 = Ncolor;
-		 this.placa =  Nplaca;
-		 this.tipo = Ntipo;
-		 this.AFabricacion = NaFabricacion;
-		 this.cilindraje = Ncilindraje;
-		 this.potencia = Npotencia;
-	};
-	this.cambiarNombre = function (nuevoNombre){
-		 this.placa = nuevoNombre;	
-	};
+var listaVehiculos = [];
+function registrarCar(Ncolor,Nplaca,Ntipo,NaFabricacion,Ncilindraje,Npotencia){
+		 
+		 var vehiculo = {
+		 	color1 : Ncolor,
+		 	placa :  Nplaca,
+		 	tipo : Ntipo,
+		 	AFabricacion : NaFabricacion,
+		 	cilindraje : Ncilindraje,
+		 	potencia : Npotencia
+		 };
+		 console.log(vehiculo);
+		 listaVehiculos.push(vehiculo);
+		 localStoragelistaVehiculo(listaVehiculos);
 };
-function registrar() {
-
-	var tabla = document.getElementById("tablita");
+function guardarVehiculos(){
+	var tipo = document.getElementById('tipo');
 	var col = document.getElementById('color').value;
 	var placa = document.getElementById('placa').value;
-	var tipo = document.getElementById('tipo');
+	var stipo = tipo.options[tipo.selectedIndex].innerHTML;
 	var fabri = document.getElementById('AFabricacion').value;
 	var cili = document.getElementById('cilindraje').value;
 	var potencia = document.getElementById('potencia').value;
 
-	Vehiculo1.registrarCar(col,placa,tipo,fabri,cili,potencia);
-
-	var fila = document.createElement("tr");
-	var columnaColor = document.createElement("td");
-	var columnaPlaca = document.createElement("td");
-	var columnaTipo = document.createElement("td");
-	var columnaFabri = document.createElement("td");
-	var columnaCili = document.createElement("td");
-	var columnaPotencia = document.createElement("td");
-
-	columnaColor.innerHTML = col;
-	columnaPlaca.innerHTML = placa;
-	columnaTipo.innerHTML = tipo.options[tipo.selectedIndex].innerHTML;
-	columnaFabri.innerHTML = fabri;
-	columnaCili.innerHTML = cili;
-	columnaPotencia.innerHTML = potencia;
-
-	fila.append(columnaColor);
-	fila.append(columnaPlaca);
-	fila.append(columnaTipo);
-	fila.append(columnaFabri);
-	fila.append(columnaCili);
-	fila.append(columnaPotencia);
-	tabla.append(fila);
-
-	localStorage.setItem("auto", JSON.stringify(Vehiculo1));
-
-	var autoJSON = JSON.parse(localStorage.getItem("auto"));
-
-	console.log(autoJSON);
-	//document.write(""+localStorage.getItem("auto")+"</br>");
+	registrarCar(col,placa,stipo,fabri,cili,potencia);
+	Llenartabla();
 };
-var Vehiculo1 = new vehiculo();
+function Llenartabla() {
+	var lista = getlistaVehiculos();
+	tbody = document.getElementById('tbody');
+	tbody.innerHTML = ' ';
+	for (var i = 0; i < lista.length; i++) {
+		var fila = tbody.insertRow(i);
+		var columnaColor = fila.insertCell(0);
+		var columnaPlaca = fila.insertCell(1);
+		var columnaTipo = fila.insertCell(2);
+		var columnaFabri = fila.insertCell(3);
+		var columnaCili = fila.insertCell(4);
+		var columnaPotencia = fila.insertCell(5); 
+		columnaColor.innerHTML = lista[i].color1;
+		columnaPlaca.innerHTML = lista[i].placa;
+		columnaTipo.innerHTML = lista[i].tipo;
+		columnaFabri.innerHTML = lista[i].AFabricacion;
+		columnaCili.innerHTML = lista[i].cilindraje;
+		columnaPotencia.innerHTML = lista[i].potencia;
+		tbody.appendChild(fila);
+	}
+};
+function getlistaVehiculos(){
+	var storedlista = localStorage.getItem('localvehiculo');
+	if(storedlista == null){
+		listaVehiculos = [];
+	}else{
+		listaVehiculos = JSON.parse(storedlista);
+	}
+	return(listaVehiculos);
+};
+function localStoragelistaVehiculo(vlista){
+	localStorage.setItem('localvehiculo',JSON.stringify(vlista));
+};
 
 

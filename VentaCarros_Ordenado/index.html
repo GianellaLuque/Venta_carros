@@ -4,7 +4,7 @@
 <head>
 	<title>Venta de carros</title>
 	<meta charset="utf-8">
-	<script type="text/javascript" src="js/vehiculo.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/misestilos.css">
 </head>
 
@@ -80,17 +80,22 @@
 				<br>
 			</div>
 			<div id="divRegistrar">
-				<button type="submit" onclick="registrar();">Registrar</button>
+				<button type="submit" id="Button">Registrar</button>
 				<br>
 				<table class="tabla" id="tablita">
-					<tr>
-						<th>Color</th>
-						<th>Placa</th>
-						<th>Tipo</th>
-						<th>Año Fabricacion</th>
-						<th>C.c</th>
-						<th>P</th>
-					</tr>
+					<thead>
+						<tr>
+							<th>Color</th>
+							<th>Placa</th>
+							<th>Tipo</th>
+							<th>Año Fabricacion</th>
+							<th>C.c</th>
+							<th>P</th>
+						</tr>
+					</thead>
+					<tbody id="tbody">
+						
+					</tbody>
 				</table>
 			</div>
 		</div>
@@ -123,6 +128,7 @@
 		</div>
 		<div id="Factura"></div>
 	</section>
+	<script type="text/javascript" src="js/vehiculo.js"></script>
 </body>
 
 </html>
