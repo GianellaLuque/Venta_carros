@@ -60,5 +60,10 @@ function getlistaVehiculos(){
 function localStoragelistaVehiculo(vlista){
 	localStorage.setItem('localvehiculo',JSON.stringify(vlista));
 };
+<<<<<<< HEAD
+=======
+var Vehiculo1 = new vehiculo();
+var Prueba = "Hola";
+>>>>>>> 0a8f017faf64a963a7996fd8a0fc6c7f4baadf3e
 
 
