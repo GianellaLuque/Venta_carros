@@ -9,6 +9,7 @@
 =======
 	<script type="text/javascript" src="js/vehiculo.js"></script>
 	<script type="text/javascript" src="js/ventas.js"></script>
+	<script type="text/javascript" src="js/clientes.js"></script>
 >>>>>>> 0a8f017faf64a963a7996fd8a0fc6c7f4baadf3e
 	<link rel="stylesheet" type="text/css" href="css/misestilos.css">
 </head>
@@ -22,23 +23,30 @@
 					<tr>
 						<td> Nombre </td>
 						<td>
-							<input type="text" name="nombre" size="30" maxlength="100" id="nombre">
+							<input type="text" size="30" maxlength="100" id="nombre">
 						</td>
 					</tr>
 					<tr>
 						<td>DNI: </td>
-						<td><input type="text" name="edad" size="4" maxlength="10" id="dni">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" align="center">
-							<input type="button" onclick="mostrarMensaje();" value="REGISTAR">
-							<input type="button" onclick="" value="EDITAR">
-
+						<td><input type="text" size="4" maxlength="10" id="dni">
 						</td>
 					</tr>
 				</table>
 			</form>
+			<button type="submit" id="ButtonCliente" onclick="guardarclientes();">Registrar</button>
+			<button type="submit" >Editar</button>
+			<table class="tabla">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>DNI</th>
+					</tr>
+				</thead>
+				<tbody id="tbodyCliente">
+					
+				</tbody>
+			</table>
+
 		</div>
 		<div id="Vehiculo">
 			<h1>VEHICULOS</h1>
@@ -85,7 +93,7 @@
 				<br>
 			</div>
 			<div id="divRegistrar">
-				<button type="submit" id="Button">Registrar</button>
+				<button type="submit" id="Button" onclick="guardarVehiculos();">Registrar</button>
 				<br>
 				<table class="tabla" id="tablita">
 					<thead>
@@ -152,7 +160,7 @@
 			</table>
 		</div>
 	</section>
-	<script type="text/javascript" src="js/vehiculo.js"></script>
+	
 </body>
 
 </html>
